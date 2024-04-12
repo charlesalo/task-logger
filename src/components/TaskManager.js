@@ -3,7 +3,7 @@ import TaskList from "./TaskList";
 
 const TaskManager = () => {
     const [tasks, setTasks] = useState(() => {
-        // Load tasks from local storage or set to an empty array if not found
+        // Load tasks from local storage
         const savedTasks = localStorage.getItem("tasks");
         return savedTasks ? JSON.parse(savedTasks) : [];
     });

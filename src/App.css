@@ -129,7 +129,6 @@ button:disabled {
   transition: width 0.3s ease;
 }
 
-/* Modal styles */
 .modal-backdrop {
   position: fixed;
   top: 0;

@@ -1,5 +1,3 @@
-// Modal.js
-
 import React, { useState } from "react";
 import Subtask from "./Subtask";
 
