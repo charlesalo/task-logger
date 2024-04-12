@@ -1,38 +1,211 @@
-.App {
+.app {
+  font-family: 'Arial', sans-serif;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  width: 80%;
+  margin: 20px auto;
+  min-height: 85vh;
+}
+
+h1 {
+  color: #333;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-form {
+  margin: auto auto 20px auto;
   display: flex;
   flex-direction: column;
+}
+
+.task-title {
+  margin: auto;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  line-height: 0;
+}
+
+.task-title input {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 85%;
+  margin-bottom: 20px;
+}
+
+.task-type-options {
+  margin-top: 10px;
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type="radio"] {
+  margin: auto 10px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+.tasks-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.list-container {
+  width: 45%;
+  padding: 10px 20px;
+  background-color: white;
+}
+
+.list-container h2 {
+  text-align: center;
+}
+
+.task-list {
+  margin-top: 20px;
+}
+
+.task {
+  background: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 10px;
+}
+
+.task-header button {
+  background-color: transparent;
+  color: gray;
+  font-weight: bolder;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.task-header button:hover {
+  background-color: red;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.task h3 {
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task-progress-bar-container {
+  background: #e0e0e0;
+  border-radius: 3px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.task-progress-bar {
+  height: 25px;
+  transition: width 0.3s ease;
+}
+
+/* Modal styles */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 5px;
+  min-width: 60%;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+}
+
+.close-btn {
+  width: 40px;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  background-color: transparent;
+  color: darkgrey;
+  align-self: flex-end;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+}
+
+.close-btn:hover {
+  background-color: red;
+  color: white;
+}
+
+.add-subtask-form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.add-subtask-form input {
+  width: 88%;
+}
+
+.subtask {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.subtask-actions {
+  display: flex;
+  justify-content: space-between;
+  width: 32%;
+}
+
+.subtask-actions button {
+  width: 140px;
+}
+
+/* Status colors */
+.subtask[style*="background-color: green"] {
+  color: white;
+}
+
+.subtask[style*="background-color: orange"] {
+  color: white;
+}
+
+.subtask[style*="background-color: grey"] {
+  color: black;
 }
