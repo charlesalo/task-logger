@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from 'react';
 import Modal from "./Modal";
 
 const Task = ({ task, deleteTask, updateSubtasks }) => {
-    const [modalOpen, setModalOpen] = React.useState(false);
+    const [modalOpen, setModalOpen] = useState(false);
 
     const toggleModal = () => {
         setModalOpen(!modalOpen);
